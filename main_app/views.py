@@ -26,3 +26,8 @@ def about(request):
 def places_index(request):
     # places = Place.objects.all()
     return render(request, 'places/index.html', {'places': places})
+
+def places_detail(request, place_id):
+    # place = Place.objects.get(id=place_id)
+    place = places[place_id]
+    return render(request, 'places/detail.html', {'place': place})
