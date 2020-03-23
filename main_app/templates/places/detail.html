@@ -14,8 +14,8 @@
             <p>Description: {{ place.description}}</p>
       </div>
       <div class="card-action">
-        <a href="">Edit</a>
-        <a href="">Delete</a>
+        <a href="{% url 'places_update' place.id %}">Edit</a>
+        <a href="{% url 'places_delete' place.id %}">Delete</a>
       </div>
     </div>
   </div>    
