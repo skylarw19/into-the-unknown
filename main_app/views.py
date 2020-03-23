@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 class PlaceCreate(LoginRequiredMixin,CreateView):
     model = Place
-    fields = '__all__'
+    fields = ['name', 'country', 'state', 'city', 'description']
 
     def form_valid(self, form):
         form.instance.user = self.request.user
