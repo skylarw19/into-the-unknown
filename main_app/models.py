@@ -34,5 +34,7 @@ class Review(models.Model):
     # def __str__(self):
     #     return f"{self.et"
 
+
+
 # NEW COMMENTS FOR PULL REQUEST
 # CHECK FOR PYCACHE
