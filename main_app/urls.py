@@ -9,4 +9,5 @@ urlpatterns = [
     path('places/create/', views.PlaceCreate.as_view(), name='places_create'),
     path('places/<int:pk>/update/', views.PlaceUpdate.as_view(), name='places_update'),
     path('places/<int:pk>/delete/', views.PlaceDelete.as_view(), name='places_delete'),
+    path('accounts/signup/', views.signup, name='signup'),
 ]
