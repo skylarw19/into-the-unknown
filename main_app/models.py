@@ -32,15 +32,13 @@ class Review(models.Model):
     details = models.CharField(max_length=500)
     rating = models.CharField(
         max_length=1,
-        choices = RATINGS,
+        choices=RATINGS,
         default=RATINGS[0][0]
     )
     place = models.ForeignKey(Place, on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return f"{self.et"
+    def __str__(self):
+        return f"{self.get_rating_display()} on {self.date}"
 
-
-
-# NEW COMMENTS FOR PULL REQUEST
-# CHECK FOR PYCACHE
+    class Meta:
+        ordering = ['-date']
