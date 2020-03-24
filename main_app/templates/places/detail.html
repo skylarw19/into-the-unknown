@@ -25,11 +25,13 @@
       {{ review_form.as_p }}
       <input type="submit" class="btn" value="Add Comment">
     </form>
-    <table class="striped">
+    <table class="highlight">
       <thead>
-        <tr><th>Date:</th></tr>
-        <tr><th>Rating:</th></tr>
-        <tr><th>Details:</th></tr>
+        <tr>
+        <th><center>Date:</center><hr></th>
+        <th><center>Review:</center><hr></th>
+        <th><center>Rating:</center><hr></th>
+        </tr>
       </thead>
       <tbody>
         {% for review in place.review_set.all %}
@@ -37,10 +39,17 @@
             <td>{{review.date}}</td>
             <td>{{review.details}}</td>
             <td>{{review.rating}}</td>
-          </tr>
+            <td><a class="btn-floating btn-large waves-effect waves-light red" href="{% url 'delete_review' review.id %}"><i class="material-icons">X</a></td>
         {% endfor %}
-      </tbody>
-    </table>
-  </div>       
+
+      </tbody>   
+    </table>   
+  </div>
+
+<script>
+  var selectEl = document.getElementById('id_meal');
+  M.FormSelect.init(selectEl);
+</script>  
+     
 
 {% endblock %}
