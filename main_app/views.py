@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Place
+from .models import Place, Review
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -52,6 +52,10 @@ def add_review(request, place_id):
         new_review.save()
     return redirect('places_detail', place_id=place_id)
     
+def delete_review(request, place_id, review_id):
+    Review.objects.get(id=review_id).delete
+    return redirect('place_detail', place_id=place_id)
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
