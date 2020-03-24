@@ -23,11 +23,13 @@
     <form action="{% url 'add_review' place.id %}" method="post">
       {% csrf_token %}
       {{ review_form.as_p }}
-      <input type="submit" class="btn" value="Add Review">
+      <input type="submit" class="btn" value="Add Comment">
     </form>
     <table class="striped">
       <thead>
-        <tr><th>Date</th><th>Details</th><th>Rating</th></tr>
+        <tr><th>Date:</th></tr>
+        <tr><th>Rating:</th></tr>
+        <tr><th>Details:</th></tr>
       </thead>
       <tbody>
         {% for review in place.review_set.all %}
