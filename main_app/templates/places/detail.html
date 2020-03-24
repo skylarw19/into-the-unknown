@@ -41,6 +41,7 @@
             <td>{{review.rating}}</td>
             <td><a class="btn-floating btn-large waves-effect waves-light red" href="{% url 'delete_review' review.id %}"><i class="material-icons">X</a></td>
         {% endfor %}
+
       </tbody>   
     </table>   
   </div>
@@ -49,5 +50,6 @@
   var selectEl = document.getElementById('id_meal');
   M.FormSelect.init(selectEl);
 </script>  
+     
 
 {% endblock %}
