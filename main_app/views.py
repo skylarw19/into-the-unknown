@@ -37,7 +37,11 @@ def places_index(request):
 @login_required
 def places_detail(request, place_id):
     place = Place.objects.get(id=place_id)
-    return render(request, 'places/detail.html', {'place': place})
+    review_form = ReviewForm()
+    return render(request, 'places/detail.html', {
+        'place': place,
+        'review_form': review_form
+        })
 
 @login_required
 def add_review(request, place_id):
