@@ -5,7 +5,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from .forms import ReviewForm
 
 class PlaceCreate(LoginRequiredMixin,CreateView):
     model = Place
@@ -39,6 +39,15 @@ def places_detail(request, place_id):
     place = Place.objects.get(id=place_id)
     return render(request, 'places/detail.html', {'place': place})
 
+@login_required
+def add_review(request, place_id):
+    form = ReviewForm(request.POST)
+    if form.is_valid():
+        new_review = form.save(commit=False)
+        new_review.place_id = place_id
+        new_review.save()
+    return redirect('places_detail', place_id=place_id)
+    
 def signup(request):
   error_message = ''
   if request.method == 'POST':
