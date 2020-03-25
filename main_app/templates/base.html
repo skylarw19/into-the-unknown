@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body style="font-family: 'Shadows Into Light', cursive;">
@@ -17,17 +18,17 @@
         <nav>
             <div class="nav-wrapper">
                 <ul>
-                    <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Into the Unknown</a></li>
+                    <li><a href="/" class="brand-logo right">&nbsp;&nbsp;Into the Unknown<i style="font-size: 60px" class="material-icons">flight_takeoff</i></a></li>
                 </ul>
-                <ul class="right">
-                    <li><a href="{% url 'about' %}">About</a></li>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a style="font-size: 30px" href="{% url 'about' %}">About</a></li>
                     {% if user.is_authenticated %}
-                      <li><a href="{% url 'places_create' %}">Add a Place</a></li>
-                      <li><a href="{% url 'index' %}">View All My Places</a></li>
-                      <li><a href="{% url 'logout' %}">Log Out</a></li>
+                      <li><a style="font-size: 30px" href="{% url 'places_create' %}">Add a Place</a></li>
+                      <li><a style="font-size: 30px" href="{% url 'index' %}">View All My Places</a></li>
+                      <li><a style="font-size: 30px" href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
-                      <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                      <li><a href="{% url 'login' %}">Log In</a></li>
+                      <li><a style="font-size: 30px" href="{% url 'signup' %}">Sign Up</a></li>
+                      <li><a style="font-size: 30px" href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
