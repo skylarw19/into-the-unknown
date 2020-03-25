@@ -6,7 +6,9 @@
 <form method="post" action="{% url 'login' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <input type="submit" class="btn" value="login">
+  <button class="btn waves-effect waves-light #00b0ff light-blue accent-3" type="submit" name="action">Login
+        <i class="material-icons left">dialpad</i>
+  </button>
   <input type="hidden" name="next" value="{{ next }}">
 </form>
 
