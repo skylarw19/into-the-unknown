@@ -6,11 +6,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 RATINGS = (
-    ('1', ''),
-    ('2', '2'),
-    ('3', '3'),
-    ('4', '4'),
-    ('5', '5')
+    ('1', '🤮🤬😱'),
+    ('2', '💩🤔😰'),
+    ('3', '😑😶🙄'),
+    ('4', '😉🧐🙂'),
+    ('5', '🤩🥳😎')
 )
 
 class Place(models.Model):
