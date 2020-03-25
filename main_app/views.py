@@ -54,9 +54,8 @@ def add_review(request, place_id):
 
 @login_required 
 def delete_review(request, place_id, review_id):
-    Review.objects.get(id=review_id).delete
+    Review.objects.get(id=review_id).delete()
     return redirect('places_detail', place_id=place_id)
-
 
 def signup(request):
   error_message = ''
