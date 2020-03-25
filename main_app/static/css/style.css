@@ -1,4 +1,7 @@
-
+.backgroundimage{
+  background-image: url("../css/backgrounds/old-1130743_1920.jpg");
+  background-size: cover;
+}
 
 body {
     display: flex;
@@ -16,3 +19,19 @@ body {
     text-align: right;
   }
 
+#commentform {
+    color: black;
+    background-color: rgba(255,255,255,0.7);
+  }
+
+.input-field label {
+  color: black;
+}
+
+#addplace{
+  background-color: rgba(255,255,255,0.7);
+}
+
+#loginform{
+  background-color: rgba(255,255,255,0.7);
+}
