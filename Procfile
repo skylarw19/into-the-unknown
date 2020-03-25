@@ -1,1 +1,1 @@
-web: gunicorn intotheunknown
+web: gunicorn intotheunknown.wsgi
