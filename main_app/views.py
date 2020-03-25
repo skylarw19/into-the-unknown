@@ -51,10 +51,12 @@ def add_review(request, place_id):
         new_review.place_id = place_id
         new_review.save()
     return redirect('places_detail', place_id=place_id)
-    
+
+@login_required 
 def delete_review(request, place_id, review_id):
     Review.objects.get(id=review_id).delete
-    return redirect('place_detail', place_id=place_id)
+    return redirect('places_detail', place_id=place_id)
+
 
 def signup(request):
   error_message = ''

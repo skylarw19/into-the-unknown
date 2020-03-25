@@ -39,7 +39,7 @@
             <td>{{review.date}}</td>
             <td>{{review.details}}</td>
             <td>{{review.rating}}</td>
-            <td><a class="btn-floating btn-large waves-effect waves-light red" href="{% url 'delete_review' review.id %}"><i class="material-icons">X</a></td>
+            <td><a class="btn-floating btn-large waves-effect waves-light red" href="{% url 'delete_review' place.id review.id %}"><i class="material-icons">X</a></td>
         {% endfor %}
 
       </tbody>   
@@ -47,7 +47,7 @@
   </div>
 
 <script>
-  var selectEl = document.getElementById('id_meal');
+  var selectEl = document.getElementById('id_rating');
   M.FormSelect.init(selectEl);
 </script>  
      
