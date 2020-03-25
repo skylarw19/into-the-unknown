@@ -3,10 +3,12 @@
 
 <h1>Log In</h1>
 
+<div id="loginform">
 <form method="post" action="{% url 'login' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <button class="btn waves-effect waves-light #00b0ff light-blue accent-3" type="submit" name="action">Login
+</div>  
+  <button class="btn waves-effect waves-light  #0097A7 cyan darken-2" type="submit" name="action">Login
         <i class="material-icons left">dialpad</i>
   </button>
   <input type="hidden" name="next" value="{{ next }}">
