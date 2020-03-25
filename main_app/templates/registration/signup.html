@@ -5,10 +5,12 @@
 
 {% if error_message %}<p class="red-text">{{ error_message }}</p>{% endif %}
 
+<div id="loginform">
 <form method="post" action="{% url 'signup' %}">
   {% csrf_token %}
   {{ form.as_p }}
-  <button class="btn waves-effect waves-light #00b0ff light-blue accent-3" type="submit" name="action">Signup
+</div>  
+  <button class="btn waves-effect waves-light  #0097A7 cyan darken-2" type="submit" name="action">Signup
         <i class="material-icons left">create</i>
   </button>
 </form>

@@ -13,22 +13,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body style="font-family: 'Shadows Into Light', cursive;">
+<body class="backgroundimage" style="font-family: 'Shadows Into Light', cursive;">
     <header class="navbar-fixed">
         <nav>
-            <div class="nav-wrapper #1de9b6 teal accent-4">
+            <div class="nav-wrapper #006064 cyan darken-4">
                 <ul>
-                    <li><a style="font-size: 50px; color: black" href="/" class="brand-logo right">&nbsp;&nbsp;Into the Unknown<i style="font-size: 60px; color: black" class="material-icons">flight_takeoff</i></a></li>
+                    <li><a style="font-size: 50px; color: white" href="/" class="brand-logo right">&nbsp;&nbsp;Into the Unknown<i style="font-size: 60px; color: white" class="material-icons">flight_takeoff</i></a></li>
                 </ul>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a style="font-size: 30px; color: black" href="{% url 'about' %}">About</a></li>
+                    <li><a style="font-size: 30px; color: white" href="{% url 'about' %}">About</a></li>
                     {% if user.is_authenticated %}
-                      <li><a style="font-size: 30px; color: black" href="{% url 'places_create' %}">Add a Place</a></li>
-                      <li><a style="font-size: 30px; color: black" href="{% url 'index' %}">View All My Places</a></li>
-                      <li><a style="font-size: 30px; color: black" href="{% url 'logout' %}">Log Out</a></li>
+                      <li><a style="font-size: 30px; color: white" href="{% url 'places_create' %}">Add a Place</a></li>
+                      <li><a style="font-size: 30px; color: white" href="{% url 'index' %}">View All My Places</a></li>
+                      <li><a style="font-size: 30px; color: white" href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
-                      <li><a style="font-size: 30px; color: black" href="{% url 'signup' %}">Sign Up</a></li>
-                      <li><a style="font-size: 30px; color: black" href="{% url 'login' %}">Log In</a></li>
+                      <li><a style="font-size: 30px; color: white" href="{% url 'signup' %}">Sign Up</a></li>
+                      <li><a style="font-size: 30px; color: white" href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -38,8 +38,8 @@
         {% block content %}
         {% endblock %}
     </main>
-  	<footer class="page-footer #1de9b6 teal accent-4">
-       <div class="right">All Rights Reserved, &copy; 2020 Into the Unknown &nbsp;</div>
+  	<footer class="page-footer #006064 cyan darken-4">
+       <div style="font-size: 30px; color: white" class="right">All Rights Reserved, &copy; 2020 Into the Unknown &nbsp;</div>
     </footer>
 </body>
 </html>

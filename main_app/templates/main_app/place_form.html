@@ -8,13 +8,13 @@
     <h1>Add a Place</h1>
   </center>  
   {% endif %}
-  <form action="" method="post">
+  <form  action="" method="post">
     {% csrf_token %}
-    <table style="font-size: 50px">
+    <table id="addplace" style="font-size: 50px">
       {{ form.as_table }}
     </table>
-    <br>
-    <button class="btn waves-effect waves-light #00b0ff light-blue accent-3" type="submit" name="action">Add
+    <br><br>
+    <button class="btn btn-large waves-effect waves-light #0097A7 cyan darken-2" type="submit" name="action">Add
         <i class="material-icons right">send</i>
     </button>
   </form>
