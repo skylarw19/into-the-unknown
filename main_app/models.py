@@ -6,11 +6,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 RATINGS = (
-    ('1', '🤮🤬😱'),
-    ('2', '💩🤔😰'),
-    ('3', '😑😶🙄'),
-    ('4', '😉🧐🙂'),
-    ('5', '🤩🥳😎')
+    ('🤮🤬😱', '🤮🤬😱'),
+    ('💩🤔😰', '💩🤔😰'),
+    ('😑😶🙄', '😑😶🙄'),
+    ('😉🧐🙂', '😉🧐🙂'),
+    ('🤩🥳😎', '🤩🥳😎')
 )
 
 class Place(models.Model):
@@ -31,7 +31,7 @@ class Review(models.Model):
     date = models.DateField('review date')
     details = models.CharField(max_length=500)
     rating = models.CharField(
-        max_length=1,
+        max_length=3,
         choices=RATINGS,
         default=RATINGS[0][0]
     )
