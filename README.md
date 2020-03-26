@@ -20,15 +20,15 @@ Into the Unknown is an app developed with Python and the Django framework. It al
 
 ## Screenshots
 
-![https://imgur.com/YPHl3aE](https://imgur.com/YPHl3aE)
+![https://imgur.com/YPHl3aE.png](https://imgur.com/YPHl3aE.png)
 
-![https://imgur.com/oGHxevS](https://imgur.com/oGHxevS)
+![https://imgur.com/oGHxevS.png](https://imgur.com/oGHxevS.png)
 
-![https://imgur.com/N2m4h9Y](https://imgur.com/N2m4h9Y)
+![https://imgur.com/N2m4h9Y.png](https://imgur.com/N2m4h9Y.png)
 
-![https://imgur.com/xGp3Un3](https://imgur.com/xGp3Un3)
+![https://imgur.com/xGp3Un3.png](https://imgur.com/xGp3Un3.png)
 
-![https://imgur.com/epVOUOb](https://imgur.com/epVOUOb)
+![https://imgur.com/epVOUOb.png](https://imgur.com/epVOUOb.png)
 
 ## User Stories
 
