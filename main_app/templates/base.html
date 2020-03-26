@@ -38,7 +38,57 @@
         {% block content %}
         {% endblock %}
     </main>
+<script>
+const ravesound = new Audio('/static/css/audio/rave.mp3');
+var originalHtml = document.body;
+var rave_is_on = 0;
+function rave() {
+        var elements = document.getElementsByTagName('*');
+        rave_is_on = 1;
+        for (var i = elements.length - 1; i >= 0; i--) { 
+          var r = Math.floor(Math.random()*256);
+          var g = Math.floor(Math.random()*256);
+          var b = Math.floor(Math.random()*256); 
+          elements[i].style.color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+          var r = Math.floor(Math.random()*256);
+          var g = Math.floor(Math.random()*256);
+          var b = Math.floor(Math.random()*256);
+          elements[i].style.backgroundColor = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+        };
+        setTimeout(rave, 100);
+        };
+     function raveToggle() {
+             if (rave_is_on == 0 ){
+                     console.log('rave is on')
+                     setTimeout(function(){ravesound.play();},100);
+                     rave_is_on = 1;
+                     rave();
+                     rave();
+             } else {
+                        rave_is_on = 0;
+                        document.location.reload(true);
+                        setTimeout(function(){ravesound.pause();},100);
+                }
+        }
+        var csslink, jslink;
+        csslink = document.getElementById("csslink");
+        jslink = document.getElementById("jslink");
+        canvaslink = document.getElementById("particleCanvas");
+        function swapMode(){
+                function loadScript(src){
+                        var el = document.createElement("script");
+                        el.src = src;
+                        document.body.appendChild(el);
+                    }
+                setTimeout(function(){colorsound.play();},100);
+                canvaslink.setAttribute("id", "c");
+                csslink.setAttribute("href", "/stylesheets/stylecolor.css"); 
+                jslink.setAttribute("src", "/javascripts/scriptscolor.js"); 
+                loadScript('/javascripts/scriptscolor.js');
+        }
+</script>
   	<footer class="page-footer #006064 cyan darken-4">
+       <a id="raveLink" onclick="raveToggle()" class="waves-effect waves-light btn left #ff3d00 deep-orange accent-3"><i class="material-icons left">error</i>Self-Destruct Sequence - Do Not Press</a> 
        <div style="font-size: 30px; color: white" class="right">All Rights Reserved, &copy; 2020 Into the Unknown &nbsp;</div>
     </footer>
 </body>
