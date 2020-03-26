@@ -77,7 +77,7 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-  def add_photo(request, place_id):
+def add_photo(request, place_id):
     photo_file = request.FILES.get('photo-file', None)
     if photo_file:
         s3 = boto3.client('s3')
@@ -89,4 +89,4 @@ def signup(request):
             photo.save()
         except:
             print('An error occurred uploading file to S3')
-    return redirect('detail', place_id=place_id)
+    return redirect('places_detail', place_id=place_id)
