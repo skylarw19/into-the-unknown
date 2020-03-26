@@ -26,6 +26,7 @@ body {
 
 .input-field label {
   color: black;
+  font-size: 2rem;
 }
 
 #addplace{
