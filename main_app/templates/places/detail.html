@@ -7,7 +7,7 @@
 
 <div class="row">
   <div class="col s6">
-    <div class="card #eeeeee grey lighten-3">
+    <div class="card #bdbdbd grey lighten-1">
       <center>  
       <div style="font-size: 20px" class="card-content">
             <span style="font-size: 35px" class="card-title">{{ place.name }}</span>
@@ -18,8 +18,8 @@
       </div>
       </center>
       <div class="card-action">
-        <a href="{% url 'places_update' place.id %}">Edit</a>
-        <a class="right" href="{% url 'places_delete' place.id %}">Delete</a>
+        <a style="color: black" href="{% url 'places_update' place.id %}">Edit</a>
+        <a style="color: black" class="right" href="{% url 'places_delete' place.id %}">Delete</a>
       </div>
     </div>
   </div>
