@@ -31,7 +31,7 @@ class Review(models.Model):
     date = models.DateField('review date')
     details = models.CharField(max_length=500)
     rating = models.CharField(
-        max_length=3,
+        max_length=100,
         choices=RATINGS,
         default=RATINGS[0][0]
     )
