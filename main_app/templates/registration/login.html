@@ -3,8 +3,8 @@
 
 <h1>Log In</h1>
 
-<div id="loginform">
-<form method="post" action="{% url 'login' %}">
+<div class="input-field label" id="loginform">
+<form class="label" method="post" action="{% url 'login' %}">
   {% csrf_token %}
   {{ form.as_p }}
 </div>  

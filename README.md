@@ -25,7 +25,7 @@ Into the Unknown is an app developed with Python and the Django framework. It al
 User story 1:
 Elsa, Queen of Arendelle, has started hearing a strange voice calling out to her. Although there are a thousand reasons she should go about her day and ignore the whispers, she can’t seem to block out the calls. As Elsa journeys into the unknown in search of the origins of the voice, she has decided to keep track of her adventures.
 
-User story 2: -
+User story 2:
 The Avengers set out in search of the infinity stones in a race against time - they must obtain them all to keep Thanos from snapping away half the population. As they travel, they’ve decided to log the places they’ve visited, hoping to go back to some of their favorites once Thanos has been put down for good.
 
 
